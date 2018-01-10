@@ -8,6 +8,12 @@
 
     <dependencies>
 		<!-- insert javax:javaee-api:8.0 dependency here -->
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>8.0</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
