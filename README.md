@@ -75,6 +75,12 @@ public class HelloWorldResource {
 }
 ```
 
+Now you can build the project and deploy the final artifact to your Payara Server.
+
+```bash
+$ mvn clean package
+```
+
 ## Video 1.5: Containerization
 
 To containerize our microservice, we have to write a `Dockerfile`. See the `step-04`
@@ -96,6 +102,8 @@ COPY target/hello-javaee8.war $DEPLOY_DIR
 To build the image and run it as a container, open a command prompt and issue the following
 shell commands:
 ```bash
+$ mvn package
+
 $ docker build -t hello-javaee8:1.0-full .
 $ docker run -it -p 8080:8080 hello-javaee8:1.0-full
 ```
@@ -111,6 +119,8 @@ COPY target/hello-javaee8.war /opt/payara/deployments
 To build the image and run it as a container, open a command prompt and issue the following
 shell commands:
 ```bash
+$ mvn package
+
 $ docker build -t hello-javaee8:1.0-micro .
 $ docker run -it -p 8080:8080 hello-javaee8:1.0-micro
 ```
