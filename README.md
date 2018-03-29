@@ -40,7 +40,7 @@ of the project. This is so that our classes are recognized as CDI beans.
 <beans xmlns="http://xmlns.jcp.org/xml/ns/javaee"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
-                      http://xmlns.jcp.org/xml/ns/javaee/beans_1_1.xsd"
+                      http://xmlns.jcp.org/xml/ns/javaee/beans_2_0.xsd"
        bean-discovery-mode="all">
 </beans>
 ```
@@ -95,7 +95,7 @@ The two options presented here are:
 Add a `Dockerfile` to the base directory of this project and add the following content:
 
 ```
-FROM payara/server-full:5-SNAPSHOT
+FROM payara/server-full:5.181
 COPY target/hello-javaee8.war $DEPLOY_DIR
 ```
 
@@ -112,7 +112,7 @@ You should now be able to access the web service under the IP of you Docker host
 
 Next, we want to use the Payara Micro base image instead. Add the following content to the `Dockerfile`:
 ```
-FROM payara/micro:5-SNAPSHOT
+FROM payara/micro:5.181
 COPY target/hello-javaee8.war /opt/payara/deployments
 ```
 
