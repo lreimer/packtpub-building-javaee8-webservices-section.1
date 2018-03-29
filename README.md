@@ -1,4 +1,4 @@
-# Building Web Services with Java EE 8<br>Section 1: Getting Started with Java EE 8
+# Building Web Services with Java EE 8<br>Section 1: Getting Started
 
 This is the demo source code for the first section if the Packt Course `Building Web Services with java EE 8`.
 The Git repository contains several branches, each resembling the next step in the development of a simple
